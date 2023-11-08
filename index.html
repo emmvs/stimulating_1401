@@ -20,7 +20,9 @@
   </head>
 
   <body>
-    <div class="container text-center mt-5" data-controller="movies">
+    <div class="container text-center mt-5"
+          data-controller="movies"
+          data-movies-base-url-value="http://www.omdbapi.com/">
       <h1>Stimulus JS</h1>
       <!-- remove d-none for movie lecture part-->
       <div class="row d-none">
@@ -40,15 +42,18 @@
 
       <!-- Remove the `d-none` when you want to display the form -->
       <div class="col-12">
-        <form class="row g-2 justify-content-center py-5">
+        <form class="row g-2 justify-content-center py-5"
+              data-action="submit->movies#search">
           <div class="col-4">
-            <input type="text" class="form-control" placeholder="Find movie">
+            <input type="text" class="form-control" placeholder="Find movie" data-movies-target="input">
           </div>
           <div class="col-1">
             <input type="submit" class="btn btn-primary">
           </div>
         </form>
-        <ul class="list-group list-group-horizontal"></ul>
+        <ul class="list-group list-group-horizontal"
+            data-movies-target="results">
+        </ul>
       </div>
     </div>
   </body>
