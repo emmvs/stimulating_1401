@@ -17,7 +17,7 @@ export default class extends Controller {
     // debugger
     console.log("log -", "search was submitted!!!!!!!!!!!!");
     console.log(".value -", this.inputTarget.value);
-    // const name = "Emma was here"
+    // const name = "Emma was here 👻"
     // debugger
 
     fetch(`${this.baseUrlValue}?s=${this.inputTarget.value}&apikey=adf1f2d7`)

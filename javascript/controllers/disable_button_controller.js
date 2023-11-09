@@ -1,7 +1,6 @@
 // Import Controller class from Stimulus framework
 // Controllers = CORE CONCEPTS of Stimulus
-// - to add behavior to the HTML
-// - by connecting them to DOM elements
+// - to add behavior to the HTML by connecting them to DOM elements
 import { Controller } from 'stimulus'
 
 // Creates new Controller class without name (anonymous class)
@@ -22,17 +21,16 @@ export default class extends Controller {
   disable() {
     this.buttonTarget.innerText = "Bingo!";
     this.buttonTarget.setAttribute("disabled", "");
-    console.log("Button has been buttoned 🥁");
-
+    // console.log("Button has been buttoned 🥁");
     this.linkTarget.classList.remove("d-none");
-    console.log("Link is visible again 👻");
+    // console.log("Link is visible again 👻");
   }
 
   reset() {
     this.buttonTarget.innerText = "Click me!";
     this.buttonTarget.removeAttribute("disabled", "");
     this.linkTarget.classList.add("d-none");
-    console.log("Link is hidden again 📦");
-    console.log("Button can be buttoned 🥁");
+    // console.log("Link is hidden again 📦");
+    // console.log("Button can be buttoned 🥁");
   }
 }
