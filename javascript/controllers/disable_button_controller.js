@@ -1,5 +1,5 @@
 // Import Controller class from Stimulus framework
-// Controllers are the CORE CONCEPTS of Stimulus
+// Controllers = CORE CONCEPTS of Stimulus
 // - to add behavior to the HTML
 // - by connecting them to DOM elements
 import { Controller } from 'stimulus'
