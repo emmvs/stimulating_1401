@@ -1,7 +1,10 @@
 import { Controller } from 'stimulus';
 
 export default class extends Controller {
+  // Targets are a way to collect elements from the HTML
   static targets = ["input", "results"]
+
+  // Values are a way to store data in our HTML, & collecting it
   static values = {
     baseUrl: String
   }
@@ -21,8 +24,8 @@ export default class extends Controller {
     // debugger
 
     fetch(`${this.baseUrlValue}?s=${this.inputTarget.value}&apikey=adf1f2d7`)
-    .then(response => response.json())
-    .then((data) => {
+      .then(response => response.json())
+      .then((data) => {
       // debugger
       data.Search.forEach((movie) => {
         const movieTag = `<li class="list-group-item border-0">
